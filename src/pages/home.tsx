@@ -8,7 +8,6 @@ export default function Home() {
       <main className="flex-1 page-main" style={{ backgroundColor: '#ffffff', minHeight: '80vh', padding: '2rem 2rem' }}>
         <div className="page-container" style={{ maxWidth: '1400px' }}>
           
-          {/* Left Side: Large Featured Image Card */}
           <div style={{ display: 'flex', justifyContent: 'center' }}>
             <div className="image-card" style={{ height: '500px' }}>
               <img 
@@ -18,7 +17,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Right Side: Title & About Button */}
+
           <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', height: '100%', minHeight: '450px' }}>
             
             <div style={{ margin: '40px 0' }}>
@@ -30,7 +29,7 @@ export default function Home() {
                 Welcome to my portfolio! Thanks for stopping by. I hope you enjoy exploring my work and getting to know me a little better.
               </p>
 
-              {/* Clickable Button to Go to About Page */}
+    
               <div style={{ marginTop: '28px' }}>
                 <a 
                   href="/about" 
