@@ -7,8 +7,7 @@ export default function About() {
       <Header />
       <main className="flex-1 page-main" style={{ backgroundColor: '#ffffff', minHeight: '80vh', padding: '1rem 0 3rem 0' }}>
         <div className="page-container">
-          
-          {/* Left Side: Heading & Bio Text */}
+        
           <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: '24px' }}>
             <div>
               <h1 className="page-title">
@@ -22,8 +21,7 @@ export default function About() {
               </p>
             </div>
           </div>
-
-          {/* Right Side: Square Image Container */}
+          
           <div style={{ display: 'flex', justifyContent: 'center' }}>
             <div className="image-card">
               <img 
