@@ -18,15 +18,13 @@ export default function SocialMedia() {
       <Header />
       <main className="flex-1 page-main" style={{ backgroundColor: '#ffffff', minHeight: '80vh', padding: '1rem 0 3rem 0' }}>
         <div className="page-container">
-          
-          {/* Left Side: Square Image Card */}
+
           <div style={{ display: 'flex', justifyContent: 'center' }}>
             <div className="image-card">
               <img src="pogoy.jpg" alt="Vincent Anthony" />
             </div>
           </div>
 
-          {/* Right Side: Social Media Links */}
           <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: '24px' }}>
             <div>
               <h1 className="page-title" style={{ margin: '0 0 10px 0' }}>SOCIAL MEDIA</h1>
@@ -35,7 +33,6 @@ export default function SocialMedia() {
               </p>
             </div>
 
-            {/* Social List Stack */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', marginTop: '10px' }}>
               
               <a href="https://www.instagram.com/ant2nyv/" target="_blank" rel="noreferrer" style={socialCardStyle}>
