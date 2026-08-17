@@ -7,18 +7,21 @@ type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
 };
 
 export function Button({ children, variant = "primary", className = "", ...props }: ButtonProps) {
-  const variantStyles = {
-    primary: "bg-black text-white hover:bg-gray-800",
-    secondary: "bg-white text-gray-900 border border-gray-300 hover:bg-gray-50",
-    tertiary: "bg-transparent text-blue-600 hover:underline px-0 py-0 rounded-none",
-  };
+  const isPrimary = variant === "primary";
 
   return (
-    <button className={cn("cursor-pointer inline-flex items-center justify-center font-medium transition-colors focus:outline-none px-4 py-1.5 rounded-lg text-sm", 
-      variantStyles[variant],
-      className
-    )}
-    {...props}
+    <button 
+      className={cn(
+        "cursor-pointer inline-flex items-center justify-center font-semibold transition-colors focus:outline-none uppercase tracking-[0.15em]", 
+        isPrimary ? "hover:bg-gray-800 shadow-lg" : "",
+        className
+      )}
+      style={{
+        backgroundColor: isPrimary ? '#000000' : variant === 'secondary' ? '#ffffff' : 'transparent', color: isPrimary ? '#ffffff' : '#111827', padding: '16px 36px',
+        borderRadius: '9999px', border: variant === 'secondary' ? '1px solid #d1d5db' : 'none',
+        ...props.style
+      }}
+      {...props}
     >
       {children}
     </button>

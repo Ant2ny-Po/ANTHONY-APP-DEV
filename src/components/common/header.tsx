@@ -1,21 +1,30 @@
-export default function Header() {
+import { useState } from "react";
+import { NavLink } from "react-router";
+
+export function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <nav style={{
-      display: 'flex',
-      justifyContent: 'flex-end',
-      gap: '32px',
-      alignItems: 'center',
-      fontSize: '0.9rem',
-      fontWeight: 600,
-      letterSpacing: '0.05em',
-      width: '90%',
-      maxWidth: '1200px',
-      margin: '0 auto',
-      padding: '24px 0'
-    }}>
-      <a href="/" style={{ color: '#1a1a1a', textDecoration: 'none' }}>HOME</a>
-      <a href="/about" style={{ color: '#666', textDecoration: 'none' }}>ABOUT</a>
-      <a href="/hobbies" style={{ color: '#666', textDecoration: 'none' }}>SOCIAL MEDIA</a>
-    </nav>
+    <header className="site-header">
+      <div className="site-header-container">
+        <button className="menu-toggle" onClick={() => setIsOpen(!isOpen)}>
+          ☰
+        </button>
+
+        <nav className={`site-nav ${isOpen ? "open" : ""}`}>
+          <NavLink to="/" onClick={() => setIsOpen(false)}>
+            Home
+          </NavLink>  
+
+          <NavLink to="/about" onClick={() => setIsOpen(false)}>
+            About
+          </NavLink>
+
+          <NavLink to="/social" onClick={() => setIsOpen(false)}>
+            Social Media
+          </NavLink>
+        </nav>
+      </div>
+    </header>
   );
 }
