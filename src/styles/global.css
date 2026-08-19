@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 :root {
   --background: #ffffff;
@@ -39,10 +37,6 @@ body {
     sans-serif;
 }
 
-/* =========================
-   HEADER
-   ========================= */
-
 .site-header {
   position: fixed;
   top: 0;
@@ -50,7 +44,6 @@ body {
   width: 100%;
   height: 70px;
   z-index: 9999;
-
   background-color: #000000;
   border-bottom: 1px solid #222222;
 }
@@ -60,7 +53,6 @@ body {
   max-width: 1200px;
   height: 70px;
   margin: 0 auto;
-
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -75,12 +67,10 @@ body {
 .site-nav a {
   color: #ffffff !important;
   text-decoration: none !important;
-
   font-size: 0.9rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-
   transition: opacity 0.2s ease;
 }
 
@@ -89,35 +79,29 @@ body {
   opacity: 0.7;
 }
 
-/* =========================
-   PAGE
-   ========================= */
-
 .page-main {
   width: 100%;
-  min-height: 80vh;
+  min-height: calc(100vh - 70px);
   background: #ffffff;
+  padding-top: 30px; 
 }
 
 .page-container {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
-
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 60px;
-  align-items: center;
+  align-items: start; 
 }
 
 .image-card {
   width: 100%;
   max-width: 400px;
   height: 480px;
-
   border-radius: 20px;
   overflow: hidden;
-
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
   background-color: var(--card-bg);
 }
@@ -140,9 +124,6 @@ body {
 a {
   transition: opacity 0.2s ease;
 }
-/* =========================
-   MOBILE RESPONSIVE HEADER
-   ========================= */
 
 .menu-toggle {
   display: none;
