@@ -1,6 +1,9 @@
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router"; 
 
 export function HomePageBannerSection() {
+  const navigate = useNavigate(); 
+
   return (
     <div className="flex flex-col justify-center min-h-[450px] my-10 mt-20">
       <h1 className="page-title text-[4rem] leading-[1.1] m-0">
@@ -13,7 +16,7 @@ export function HomePageBannerSection() {
       <div>
         <Button 
           variant="primary"
-          onClick={() => window.location.href = '/about'}
+          onClick={() => navigate('/about')}
         >
           About Me
         </Button>
